@@ -13,8 +13,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 // );
 ReactDOM.render(
   <Auth0Provider
-    domain="everyday06.au.auth0.com"
-    clientId="3lZK312sgFlXnWTsPjOMIbWvRrtWHsyZ"
+    domain={process.env.REACT_APP_AUTH_DOMAIN}
+    clientId={process.env.REACT_APP_AUTH_CLIENTID}
     redirectUri="http://localhost:3000"
     scope="read:current_user update:current_user_metadata"
   >
