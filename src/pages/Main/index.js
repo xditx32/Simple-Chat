@@ -11,7 +11,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
 import MessageBubble from "../../components/MessageBubble";
-import ContactList from "../../components/ContactList";
+// import ContactList from "../../components/ContactList";
+import Contact from "./Contact";
 
 const drawerWidth = 300;
 
@@ -87,13 +88,14 @@ const Main = (props) => {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <ContactList
+      {/* <ContactList
         user={{
           name: "Aditya",
           img:
             "https://img.favpng.com/20/11/12/computer-icons-user-profile-png-favpng-0UAKKCpRRsMj5NaiELzw1pV7L.jpg",
         }}
-      ></ContactList>
+      ></ContactList> */}
+      <Contact></Contact>
     </div>
   );
 
