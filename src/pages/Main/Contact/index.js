@@ -1,7 +1,9 @@
 // import gql from "graphql-tag";
 import { gql, useQuery } from "@apollo/client";
 import { Divider } from "@material-ui/core";
+// import { useRecoilState } from "recoil";
 import ContactList from "../../../components/ContactList";
+// import { selectedUserState } from "../../../recoil";
 
 const GET_USERS = gql`
   query MyQuery($order_by: [users_order_by!] = { name: desc }) {
@@ -17,6 +19,7 @@ const Contact = () => {
   const { data } = useQuery(GET_USERS, {
     variables: { order_by: { name: "asc" } },
   });
+  // const [selectedUser, setSelectedUser] = useRecoilState(selectedUserState);
 
   const users = [{ id: null, name: "LOBI" }];
   if (data && data.users) {
